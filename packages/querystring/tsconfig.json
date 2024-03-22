@@ -1,0 +1,10 @@
+{
+  "extends": "../ts-config/src/tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "outDir": "build",
+    "rootDir": "src",
+    "target": "es5"
+  },
+  "include": ["src"]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "@favware/ts-config",
+  "version": "2.0.0",
+  "description": "Shareable TypeScript configuration for all Favware projects",
+  "author": "@favware",
+  "license": "MIT",
+  "main": "dist/tsconfig.json",
+  "homepage": "https://favware.tech",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint __tests__ scripts --ext ts --fix -c ../../.eslintrc",
+    "prebuild": "yarn lint",
+    "build": "tsc -b __tests__ && tsc -b scripts",
+    "prepublishOnly": "node build/prepublish.js",
+    "postpublish": "node build/postpublish.js"
+  },
+  "peerDependencies": {
+    "typescript": ">=3"
+  },
+  "files": [
+    "tsconfig.json"
+  ],
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/favware/node-packages.git",
+    "directory": "packages/tsconfig"
+  },
+  "bugs": {
+    "url": "https://github.com/favware/node-packages/issues"
+  },
+  "keywords": [
+    "tsconfig",
+    "favware",
+    "typescript",
+    "ts"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
